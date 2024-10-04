@@ -1,5 +1,7 @@
 package lotr;
 
+import java.lang.reflect.InvocationTargetException;
+
 public class GameManager {
 
     public void fight(Character c1, Character c2) {
@@ -39,7 +41,10 @@ public class GameManager {
             System.out.println(c2.getClass().getSimpleName() + " wins the battle!");
         }
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InstantiationException, 
+IllegalAccessException, IllegalArgumentException,
+InvocationTargetException, NoSuchMethodException, SecurityException,
+ClassNotFoundException {
         CharacterFactory characterFactory = new CharacterFactory();
         Character c1 = new CharacterFactory().createCharacter();
         Character c2 = new CharacterFactory().createCharacter();
